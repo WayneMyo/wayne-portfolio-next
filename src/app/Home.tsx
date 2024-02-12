@@ -31,30 +31,25 @@ const Home: FC = () => {
                                             <TypingAnimations />
                                         </p>
                                         <div className="btn-bar">
-                                            <a href="#" className="btn btn-theme">
+                                            <a href="/static/Wai-Yan-Khine-Myo-Resume.pdf" download className="btn btn-theme">
                                                 Download CV
                                             </a>
                                         </div>
                                     </div>
                                     <ul className="social-icons">
                                         <li>
-                                            <a className="facebook" href="#">
-                                                <i className="fab fa-facebook-f" />
-                                            </a>
-                                        </li>{" "}
-                                        <li>
-                                            <a className="twitter" href="#">
-                                                <i className="fab fa-twitter" />
-                                            </a>
-                                        </li>{" "}
-                                        <li>
-                                            <a className="google" href="#">
-                                                <i className="fab fa-google-plus-g" />
-                                            </a>
-                                        </li>{" "}
-                                        <li>
-                                            <a className="linkedin" href="#">
+                                            <a className="facebook" href="https://www.linkedin.com/in/wayne-myo/" target="_blank" rel="noopener noreferrer">
                                                 <i className="fab fa-linkedin-in" />
+                                            </a>
+                                        </li>{" "}
+                                        <li>
+                                            <a className="twitter" href="https://github.com/WayneMyo" target="_blank" rel="noopener noreferrer">
+                                                <i className="fab fa-github" />
+                                            </a>
+                                        </li>{" "}
+                                        <li>
+                                            <a className="linkedin" href="https://www.instagram.com/wayne_stayprovocative" target="_blank" rel="noopener noreferrer">
+                                                <i className="fab fa-instagram" />
                                             </a>
                                         </li>
                                     </ul>

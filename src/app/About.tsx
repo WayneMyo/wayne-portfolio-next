@@ -8,7 +8,7 @@ const AboutUs: FC = () => {
             extraClass="about-section"
             title={'About Me'}
             subTitle={'WHO I AM'}
-            leftImage="static/img/img-1.png"
+            leftImage="static/img/img-1.jpg"
             leftImageTitle={'About Me'}
         >
             <div className="row">
@@ -58,7 +58,7 @@ const AboutUs: FC = () => {
                     </div>{" "}
                     {/* row */}
                     <div className="btn-bar">
-                        <a href="#" className="btn btn-theme">
+                        <a href="/static/Wai-Yan-Khine-Myo-Resume.pdf" download className="btn btn-theme">
                             Download CV
                         </a>
                     </div>

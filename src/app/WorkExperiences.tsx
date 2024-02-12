@@ -11,7 +11,7 @@ const Experiences: FC<ExperiencesProps> = () => {
             extraClass="resume-section"
             title="Resume"
             subTitle="History"
-            leftImage="static/img/img-2.png"
+            leftImage="static/img/img-2.jpg"
         >
             <div className="row">
                 <div className="col-md-6">

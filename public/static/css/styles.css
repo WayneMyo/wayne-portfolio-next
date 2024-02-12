@@ -212,7 +212,7 @@ body.dark-body {
   background-color: #f8c964;
 }
 .blue-bg {
-  background-color: #2fb3cd;
+  background-color: #0892A5;
 }
 .blue-after:after {
   background-color: #2fb3cd;
@@ -556,15 +556,15 @@ body.dark-body {
   vertical-align: middle;
 }
 .home-banner .social-icons a {
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
   background: #111;
   display: block;
   text-align: center;
-  line-height: 30px;
+  line-height: 38px;
   color: #fff;
   border-radius: 50%;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 @media (max-width: 991px) {
