@@ -17,7 +17,7 @@ const Home: FC = () => {
                 <div className="row no-gutters full-screen">
                     <div className="col-lg-3 col-xl-4 blue-bg">
                         <div className="d-flex align-items-end home-user-avtar v-center-box">
-                            <img src="static/img/user.png" />
+                            <img src="/static/img/user.png" alt="my-pic"/>
                         </div>
                     </div>
                     <div className="col-lg-9 col-xl-8">
@@ -26,7 +26,7 @@ const Home: FC = () => {
                                 <div className="v-center-box d-flex align-items-center">
                                     <div className="home-text">
                                         <h6 className="dark-color theme-after">Hi!</h6>
-                                        <h1 className="dark-color blue-after">I'm Wayne</h1>
+                                        <h1 className="dark-color blue-after">I&apos;m Wayne</h1>
                                         <p>
                                             <TypingAnimations />
                                         </p>

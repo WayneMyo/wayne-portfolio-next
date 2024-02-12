@@ -824,9 +824,12 @@ body.dark-body {
   padding: 10px 0;
 }
 
-.certificate-item i {
-  font-size: 30px;
-  margin-right: 10px;
+.certificate-icon {
+  margin-right: 15px;
+}
+
+.certificate-item h3{
+  margin-top: 12px;
 }
 
 .slick-dots {
@@ -872,8 +875,6 @@ body.dark-body {
   padding: 20px;
 }
 .recommendations-col .user .img {
-  width: 60px;
-  height: 60px;
   display: inline-block;
   vertical-align: middle;
   border-radius: 50%;

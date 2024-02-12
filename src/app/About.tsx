@@ -13,13 +13,13 @@ const AboutUs: FC = () => {
         >
             <div className="row">
                 <div className="col-md-4">
-                    <img src="static/img/black-white-user.jpg" />
+                    <img src="static/img/black-white-user.jpg" alt="my-pic-black-white" />
                 </div>
                 <div className="col-md-8 md-m-30px-t">
                     <div className="about-text">
-                        <h3 className="dark-color">I'm Wayne Myo</h3>
+                        <h3 className="dark-color">I&apos;m Wayne Myo</h3>
                         <p className="m-0px">
-                            I'm a senior consultant at the Journey to Cloud team within NCS Group - a leading technology services firm in the Asia Pacific region,
+                            I&apos;m a senior consultant at the Journey to Cloud team within NCS Group - a leading technology services firm in the Asia Pacific region,
                             I bring a wealth of experience in technology consulting, cloud solutions architecture and full-stack software development.
                             With a graduate diploma in Systems Analysis from the Institute of System Science (NUS), I graduated in 2020, laying the foundation for
                             a successful career switch to software engineering from semiconductor engineering.

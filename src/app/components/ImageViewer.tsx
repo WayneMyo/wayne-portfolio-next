@@ -24,7 +24,7 @@ const ImgViews: FC<ImgViewsProps> = ({ close, src }) => {
                 >
                     <div className="mfp-content" ref={domNode}>
                         <div className="mfp-iframe-scaler">
-                            {src && <img className="mfp-img" src={src} />}
+                            {src && <img className="mfp-img" alt="image-view-pic" src={src} />}
                         </div>
                     </div>
                     <div className="mfp-preloader">Loading...</div>

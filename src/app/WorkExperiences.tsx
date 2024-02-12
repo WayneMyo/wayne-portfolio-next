@@ -1,4 +1,5 @@
-import React, { FC } from "react";
+import { FC } from "react";
+import Image from "next/image";
 import SectionContainer from "./components/SectionContainer";
 import Recommendations from "./Recommendations";
 
@@ -141,23 +142,58 @@ const Experiences: FC<ExperiencesProps> = () => {
                         <h3 className="dark-color">Cloud Certifications</h3>
                         <div className="skills">
                             <div className="certificate-item">
-                                <i className="theme-color ti-medall" />
+                                <div className="certificate-icon">
+                                    <Image
+                                        src="/static/img/aws-icon.png"
+                                        alt="aws-icon"
+                                        width={50}
+                                        height={50}
+                                    />
+                                </div>
                                 <h3>AWS Certified Solutions Architect – Associate</h3>
                             </div>
                             <div className="certificate-item">
-                                <i className="theme-color ti-medall" />
+                                <div className="certificate-icon">
+                                    <Image
+                                        src="/static/img/aws-icon.png"
+                                        alt="aws-icon"
+                                        width={50}
+                                        height={50}
+                                    />
+                                </div>
                                 <h3>AWS Certified Developer – Associate</h3>
                             </div>
                             <div className="certificate-item">
-                                <i className="theme-color ti-medall" />
+                                <div className="certificate-icon">
+                                    <Image
+                                        src="/static/img/aws-icon.png"
+                                        alt="aws-icon"
+                                        width={50}
+                                        height={50}
+                                    />
+                                </div>
                                 <h3>AWS File Storage Specialized</h3>
                             </div>
                             <div className="certificate-item">
-                                <i className="theme-color ti-medall" />
+                                <div className="certificate-icon">
+                                    <Image
+                                        src="/static/img/aws-icon.png"
+                                        alt="aws-icon"
+                                        width={50}
+                                        height={50}
+                                    />
+                                </div>
                                 <h3>AWS Certified Cloud Practitioner</h3>
                             </div>
                             <div className="certificate-item">
-                                <i className="theme-color ti-medall" />
+                                <div className="certificate-icon">
+                                    <Image
+                                        src="/static/img/msft-icon.png"
+                                        alt="msft-icon"
+                                        width={50}
+                                        height={50}
+                                    />
+                                </div>
                                 <h3>Microsoft Certified Azure Fundamentals</h3>
                             </div>
                         </div>
@@ -166,19 +202,47 @@ const Experiences: FC<ExperiencesProps> = () => {
                         <h3 className="dark-color">Others</h3>
                         <div className="skills">
                             <div className="certificate-item">
-                                <i className="theme-color ti-medall" />
+                                <div className="certificate-icon">
+                                    <Image
+                                        src="/static/img/google-icon.png"
+                                        alt="google-icon"
+                                        width={50}
+                                        height={50}
+                                    />
+                                </div>
                                 <h3>Google Advanced Data Analytics Certificate</h3>
                             </div>
                             <div className="certificate-item">
-                                <i className="theme-color ti-medall" />
+                                <div className="certificate-icon">
+                                    <Image
+                                        src="/static/img/ibm-icon.png"
+                                        alt="ibm-icon"
+                                        width={50}
+                                        height={50}
+                                    />
+                                </div>
                                 <h3>IBM Data Science Professional Certificate</h3>
                             </div>
                             <div className="certificate-item">
-                                <i className="theme-color ti-medall" />
+                                <div className="certificate-icon">
+                                    <Image
+                                        src="/static/img/abbyy-icon.png"
+                                        alt="abbyy-icon"
+                                        width={50}
+                                        height={50}
+                                    />
+                                </div>
                                 <h3>ABBYY Vantage Certified Business Analyst</h3>
                             </div>
                             <div className="certificate-item">
-                                <i className="theme-color ti-medall" />
+                                <div className="certificate-icon">
+                                    <Image
+                                        src="/static/img/abbyy-icon.png"
+                                        alt="abbyy-icon"
+                                        width={50}
+                                        height={50}
+                                    />
+                                </div>
                                 <h3>ABBYY Vantage Advanced Designer</h3>
                             </div>
                         </div>
