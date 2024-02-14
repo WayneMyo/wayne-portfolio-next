@@ -5,7 +5,6 @@ interface TypingAnimationProps {
   animationStrings: string[];
 }
 
-
 const TypingAnimation: FC<TypingAnimationProps> = ({ animationStrings }) => {
   useEffect(() => {
     const options = {

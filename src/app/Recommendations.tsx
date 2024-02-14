@@ -53,16 +53,13 @@ const Recommendations: FC = () => {
             <p>
               I am writing to recommend Wai Yan, a software engineer with exceptional technical skills and expertise in designing and developing software applications.
               I had the pleasure of working with Wai Yan in a project where he demonstrated his technical skills and vast experience in software development.
-            </p>
-            <p>
+              <br/><br/>
               Wai Yan is a talented and dedicated professional who is an expert in using various technologies such as React.js, Python, Docker, Kubernetes and others frontend and
               backend development tools, making him an invaluable asset to any team.
-            </p>
-            <p>
+              <br/><br/>
               He is a skilled negotiator who ensures that the customer&apos;s needs are met while delivering high-quality software applications. He is an excellent communicator and
               provides exceptional customer service to ensure that the project is delivered on time and within budget.
-            </p>
-            <p>
+              <br/><br/>
               Overall, I am impressed with Wai Yan&apos;s work ethic, technical skills, and collaborative spirit. He is an exceptional team player and a knowledgeable professional who can take
               on any challenge. I highly recommend him for any team looking for a skilled and knowledgeable team member.
             </p>
