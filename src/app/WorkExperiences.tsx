@@ -143,56 +143,31 @@ const Experiences: FC<ExperiencesProps> = () => {
                         <div className="skills">
                             <div className="certificate-item">
                                 <div className="certificate-icon">
-                                    <Image
-                                        src="/static/img/aws-icon.png"
-                                        alt="aws-icon"
-                                        width={50}
-                                        height={50}
-                                    />
+                                    <img src="/static/img/aws-icon.png" alt="aws-icon" />
                                 </div>
                                 <h3>AWS Certified Solutions Architect – Associate</h3>
                             </div>
                             <div className="certificate-item">
                                 <div className="certificate-icon">
-                                    <Image
-                                        src="/static/img/aws-icon.png"
-                                        alt="aws-icon"
-                                        width={50}
-                                        height={50}
-                                    />
+                                    <img src="/static/img/aws-icon.png" alt="aws-icon" />
                                 </div>
                                 <h3>AWS Certified Developer – Associate</h3>
                             </div>
                             <div className="certificate-item">
                                 <div className="certificate-icon">
-                                    <Image
-                                        src="/static/img/aws-icon.png"
-                                        alt="aws-icon"
-                                        width={50}
-                                        height={50}
-                                    />
+                                    <img src="/static/img/aws-icon.png" alt="aws-icon" />
                                 </div>
                                 <h3>AWS File Storage Specialized</h3>
                             </div>
                             <div className="certificate-item">
                                 <div className="certificate-icon">
-                                    <Image
-                                        src="/static/img/aws-icon.png"
-                                        alt="aws-icon"
-                                        width={50}
-                                        height={50}
-                                    />
+                                    <img src="/static/img/aws-icon.png" alt="aws-icon" />
                                 </div>
                                 <h3>AWS Certified Cloud Practitioner</h3>
                             </div>
                             <div className="certificate-item">
                                 <div className="certificate-icon">
-                                    <Image
-                                        src="/static/img/msft-icon.png"
-                                        alt="msft-icon"
-                                        width={50}
-                                        height={50}
-                                    />
+                                    <img src="/static/img/msft-icon.png" alt="msft-icon" />
                                 </div>
                                 <h3>Microsoft Certified Azure Fundamentals</h3>
                             </div>
@@ -203,45 +178,25 @@ const Experiences: FC<ExperiencesProps> = () => {
                         <div className="skills">
                             <div className="certificate-item">
                                 <div className="certificate-icon">
-                                    <Image
-                                        src="/static/img/google-icon.png"
-                                        alt="google-icon"
-                                        width={50}
-                                        height={50}
-                                    />
+                                    <img src="/static/img/google-icon.png" alt="google-icon" />
                                 </div>
                                 <h3>Google Advanced Data Analytics Certificate</h3>
                             </div>
                             <div className="certificate-item">
                                 <div className="certificate-icon">
-                                    <Image
-                                        src="/static/img/ibm-icon.png"
-                                        alt="ibm-icon"
-                                        width={50}
-                                        height={50}
-                                    />
+                                    <img src="/static/img/ibm-icon.png" alt="ibm-icon" />
                                 </div>
                                 <h3>IBM Data Science Professional Certificate</h3>
                             </div>
                             <div className="certificate-item">
                                 <div className="certificate-icon">
-                                    <Image
-                                        src="/static/img/abbyy-icon.png"
-                                        alt="abbyy-icon"
-                                        width={50}
-                                        height={50}
-                                    />
+                                    <img src="/static/img/abbyy-icon.png" alt="abbyy-icon" />
                                 </div>
                                 <h3>ABBYY Vantage Certified Business Analyst</h3>
                             </div>
                             <div className="certificate-item">
                                 <div className="certificate-icon">
-                                    <Image
-                                        src="/static/img/abbyy-icon.png"
-                                        alt="abbyy-icon"
-                                        width={50}
-                                        height={50}
-                                    />
+                                    <img src="/static/img/abbyy-icon.png" alt="abbyy-icon" />
                                 </div>
                                 <h3>ABBYY Vantage Advanced Designer</h3>
                             </div>

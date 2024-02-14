@@ -1,5 +1,4 @@
 import { FC } from "react";
-import Image from "next/image";
 import Slider from "react-slick";
 import { SliderProps } from "./components/SliderProps"
 
@@ -31,7 +30,7 @@ const Recommendations: FC = () => {
           </div>
           <div className="user">
             <div className="img">
-              <Image src="/static/img/keanseng.jpg" alt="kean-seng-tan-pic" width={60} height={60} />
+              <img src="/static/img/keanseng.jpg" alt="kean-seng-tan-pic" />
             </div>
             <div className="name ml-2">
               <span>Kean Seng Tan</span>
@@ -50,7 +49,7 @@ const Recommendations: FC = () => {
           </div>
           <div className="user">
             <div className="img">
-              <Image src="/static/img/weetee.jpg" alt="wee-tee-soh-pic" width={60} height={60} />
+              <img src="/static/img/weetee.jpg" alt="wee-tee-soh-pic" />
             </div>
             <div className="name ml-2">
               <span>Wee Tee Soh</span>
