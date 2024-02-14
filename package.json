@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "aws s3 sync .next/ s3://wayne-myo"
+    "deploy": "aws s3 sync out/ s3://wayne-myo"
   },
   "dependencies": {
     "imagesloaded": "^5.0.0",
