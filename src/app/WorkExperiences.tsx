@@ -1,11 +1,118 @@
 import { FC } from "react";
-import Image from "next/image";
 import SectionContainer from "./components/SectionContainer";
 import Recommendations from "./Recommendations";
 
 interface ExperiencesProps { }
 
 const Experiences: FC<ExperiencesProps> = () => {
+    const experiences = [
+        {
+            title: "Senior Consultant - NCS Group",
+            date: "May 2022 - Present",
+            description: `Senior consultant at Journey to Cloud team. Collaborated with multiple government agencies to 
+                conduct customer workshops and drive rapic POC development initiatives. Successfully delivered on-prem 
+                Data Migration to Azure GCC1.0 for a large government educational institute.`
+        },
+        {
+            title: "Software Developer Manager - Novade Solutions",
+            date: "Feb 2021 - May 2022",
+            description: `Led a team of 5 developers to develop and maintain 4 core modules of Novade Enterprise Platform. 
+                Developed custom projects for key clients - site cost management application and dashboard for UP-Bihar 
+                National Expressway in India.`
+        },
+        {
+            title: "Application Developer (Intern) - National University Health System (NUHS)",
+            date: "Sep 2020 - Feb 2021",
+            description: `Developed a serverless clinical AI chatbot by leveraging Amazon Lex, Amazon Elasticsearch, Lambda functions 
+                and Twilio APIs. Developed real-time chat modules using web sockets and Django - VueJS stack.`
+        },
+        {
+            title: "Technical Specialist - Micron Technology",
+            date: "Mar 2016 - Feb 2020",
+            description: `Led and mentored a team of 8 technicians, initiated improvement projects, and solved complex equipment issues.`
+        },
+        {
+            title: "Sales Engineer - SMC Singapore SAMVIPC",
+            date: "Sep 2020 - Feb 2021",
+            description: `Managed key clients and distributors, increasing total sales by 15%, and resolved technical and quality related 
+                matters for customers, ensuring customer satisfaction.`
+        }
+    ];
+
+    const education = [
+        {
+            title: "Institute of Systems Science (ISS) - NUS",
+            date: "Feb 2020 - Feb 2021",
+            description: "Graduate Diploma, Systems Analysis"
+        },
+        {
+            title: "Coventry University",
+            date: "June 2015 - June 2017",
+            description: "Bachelor of Engineering with Honors, Mechanical Engineering"
+        },
+        {
+            title: "Ngee Ann Polytechnic",
+            date: "Feb 2011 - Feb 2014",
+            description: "Diploma, Automation & Mechatronics Systems"
+        }
+    ];
+
+    const certificates = [
+        {
+            title: "AWS Certified Solutions Architect – Associate",
+            img: "/static/img/aws-icon.png",
+            type: "Cloud Certifications"
+        },
+        {
+            title: "AWS Certified Developer – Associate",
+            img: "/static/img/aws-icon.png",
+            type: "Cloud Certifications"
+        },
+        {
+            title: "AWS File Storage Specialized",
+            img: "/static/img/aws-icon.png",
+            type: "Cloud Certifications"
+        },
+        {
+            title: "AWS Certified Cloud Practitioner",
+            img: "/static/img/aws-icon.png",
+            type: "Cloud Certifications"
+        },
+        {
+            title: "Microsoft Certified Azure Fundamentals",
+            img: "/static/img/msft-icon.png",
+            type: "Cloud Certifications"
+        },
+        {
+            title: "Google Advanced Data Analytics Certificate",
+            img: "/static/img/google-icon.png",
+            type: "Others"
+        },
+        {
+            title: "IBM Data Science Professional Certificate",
+            img: "/static/img/ibm-icon.png",
+            type: "Others"
+        },
+        {
+            title: "ABBYY Vantage Certified Business Analyst",
+            img: "/static/img/abbyy-icon.png",
+            type: "Others"
+        },
+        {
+            title: "ABBYY Vantage Advanced Designer",
+            img: "/static/img/abbyy-icon.png",
+            type: "Others"
+        }
+    ];
+
+    const certificatesByType = certificates.reduce((acc, certificate) => {
+        if (!acc[certificate.type]) {
+            acc[certificate.type] = [];
+        }
+        acc[certificate.type].push(certificate);
+        return acc;
+    }, {} as { [key: string]: { title: string; img: string; type: string }[] });
+
     return (
         <SectionContainer
             name="resume"
@@ -19,70 +126,20 @@ const Experiences: FC<ExperiencesProps> = () => {
                     <div className="resume-row">
                         <h2 className="theme-after dark-color">Experience</h2>
                         <ul>
-                            <li>
-                                <div className="r-name">
-                                    <i className="theme-bg ti-briefcase" />
-                                    <span className="dark-color">Senior Consultant - NCS Group</span>
-                                    <label>May 2022 - Present</label>
-                                </div>
-                                <div className="r-info">
-                                    <p>
-                                        Senior consultant at Journey to Cloud team. Collaborated with multiple government agencies to
-                                        conduct customer workshops and drive rapic POC development initiatives. Successfully delivered on-prem
-                                        Data Migration to Azure GCC1.0 for a large government educational institute.
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="r-name">
-                                    <i className="theme-bg ti-briefcase" />
-                                    <span className="dark-color">Software Developer Manager - Novade Solutions</span>
-                                    <label>Feb 2021 - May 2022</label>
-                                </div>
-                                <div className="r-info">
-                                    <p>
-                                        Led a team of 5 developers to develop and maintain 4 core modules of Novade Enterprise Platform.
-                                        Developed custom projects for key clients - site cost management application and dashboard for UP-Bihar National Expressway in India.
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="r-name">
-                                    <i className="theme-bg ti-briefcase" />
-                                    <span className="dark-color">Application Developer (Intern) - National University Health System (NUHS)</span>
-                                    <label>Sep 2020 - Feb 2021</label>
-                                </div>
-                                <div className="r-info">
-                                    <p>
-                                        Developed a serverless clinical AI chatbot by leveraging Amazon Lex, Amazon Elasticsearch, Lambda functions and Twilio APIs.
-                                        Developed real-time chat modules using web sockets and Django - VueJS stack.
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="r-name">
-                                    <i className="theme-bg ti-briefcase" />
-                                    <span className="dark-color">Technical Specialist - Micron Technology</span>
-                                    <label>Mar 2016 - Feb 2020</label>
-                                </div>
-                                <div className="r-info">
-                                    <p>
-                                        Led and mentored a team of 8 technicians, initiated improvement projects, and solved complex equipment issues.
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="r-name">
-                                    <i className="theme-bg ti-briefcase" />
-                                    <span className="dark-color">Sales Engineer - SMC Singapore SAMVIPC</span>
-                                    <label>Sep 2020 - Feb 2021</label>
-                                </div>
-                                <div className="r-info">
-                                    <p>
-                                        Managed key clients and distributors, increasing total sales by 15%, and resolved technical and quality related matters for customers, ensuring customer satisfaction.
-                                    </p>
-                                </div>
-                            </li>
+                            {
+                                experiences.map((experience, index) => (
+                                    <li key={index}>
+                                        <div className="r-name">
+                                            <i className="theme-bg ti-briefcase" />
+                                            <span className="dark-color">{experience.title}</span>
+                                            <label>{experience.date}</label>
+                                        </div>
+                                        <div className="r-info">
+                                            <p>{experience.description}</p>
+                                        </div>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </div>
                 </div>{" "}
@@ -91,42 +148,20 @@ const Experiences: FC<ExperiencesProps> = () => {
                     <div className="resume-row">
                         <h2 className="theme-after dark-color">Education</h2>
                         <ul>
-                            <li>
-                                <div className="r-name">
-                                    <i className="theme-bg fas fa-graduation-cap" />
-                                    <span className="dark-color">Institute of Systems Science (ISS) - NUS</span>
-                                    <label>Feb 2020 - Feb 2021</label>
-                                </div>
-                                <div className="r-info">
-                                    <p>
-                                        Graduate Diploma, Systems Analysis
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="r-name">
-                                    <i className="theme-bg fas fa-graduation-cap" />
-                                    <span className="dark-color">Coventry University</span>
-                                    <label>June 2015 - June 2017</label>
-                                </div>
-                                <div className="r-info">
-                                    <p>
-                                        Bachelor of Engineering with Honors, Mechanical Engineering
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="r-name">
-                                    <i className="theme-bg fas fa-graduation-cap" />
-                                    <span className="dark-color">Ngee Ann Polytechnic</span>
-                                    <label>Feb 2011 - Feb 2014</label>
-                                </div>
-                                <div className="r-info">
-                                    <p>
-                                        Diploma, Automation & Mechatronics Systems
-                                    </p>
-                                </div>
-                            </li>
+                            {
+                                education.map((education, index) => (
+                                    <li key={index}>
+                                        <div className="r-name">
+                                            <i className="theme-bg ti-book" />
+                                            <span className="dark-color">{education.title}</span>
+                                            <label>{education.date}</label>
+                                        </div>
+                                        <div className="r-info">
+                                            <p>{education.description}</p>
+                                        </div>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </div>
                 </div>{" "}
@@ -138,70 +173,25 @@ const Experiences: FC<ExperiencesProps> = () => {
                     <h2 className="dark-color theme-after">Certificates</h2>
                 </div>
                 <div className="row">
-                    <div className="col-md-6 p-30px-r sm-p-15px-r">
-                        <h3 className="dark-color">Cloud Certifications</h3>
-                        <div className="skills">
-                            <div className="certificate-item">
-                                <div className="certificate-icon">
-                                    <img src="/static/img/aws-icon.png" alt="aws-icon" />
+                    {
+                        Object.keys(certificatesByType).map((type, index) => (
+                            <div key={index} className="col-md-6 p-30px-r sm-p-15px-r">
+                                <h3 className="dark-color">{type}</h3>
+                                <div className="skills">
+                                    {
+                                        certificatesByType[type].map((certificate, index) => (
+                                            <div key={index} className="certificate-item">
+                                                <div className="certificate-icon">
+                                                    <img src={certificate.img} alt='cert-icon' />
+                                                </div>
+                                                <h3>{certificate.title}</h3>
+                                            </div>
+                                        ))
+                                    }
                                 </div>
-                                <h3>AWS Certified Solutions Architect – Associate</h3>
                             </div>
-                            <div className="certificate-item">
-                                <div className="certificate-icon">
-                                    <img src="/static/img/aws-icon.png" alt="aws-icon" />
-                                </div>
-                                <h3>AWS Certified Developer – Associate</h3>
-                            </div>
-                            <div className="certificate-item">
-                                <div className="certificate-icon">
-                                    <img src="/static/img/aws-icon.png" alt="aws-icon" />
-                                </div>
-                                <h3>AWS File Storage Specialized</h3>
-                            </div>
-                            <div className="certificate-item">
-                                <div className="certificate-icon">
-                                    <img src="/static/img/aws-icon.png" alt="aws-icon" />
-                                </div>
-                                <h3>AWS Certified Cloud Practitioner</h3>
-                            </div>
-                            <div className="certificate-item">
-                                <div className="certificate-icon">
-                                    <img src="/static/img/msft-icon.png" alt="msft-icon" />
-                                </div>
-                                <h3>Microsoft Certified Azure Fundamentals</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 p-30px-l sm-p-15px-l sm-m-30px-t">
-                        <h3 className="dark-color">Others</h3>
-                        <div className="skills">
-                            <div className="certificate-item">
-                                <div className="certificate-icon">
-                                    <img src="/static/img/google-icon.png" alt="google-icon" />
-                                </div>
-                                <h3>Google Advanced Data Analytics Certificate</h3>
-                            </div>
-                            <div className="certificate-item">
-                                <div className="certificate-icon">
-                                    <img src="/static/img/ibm-icon.png" alt="ibm-icon" />
-                                </div>
-                                <h3>IBM Data Science Professional Certificate</h3>
-                            </div>
-                            <div className="certificate-item">
-                                <div className="certificate-icon">
-                                    <img src="/static/img/abbyy-icon.png" alt="abbyy-icon" />
-                                </div>
-                                <h3>ABBYY Vantage Certified Business Analyst</h3>
-                            </div>
-                            <div className="certificate-item">
-                                <div className="certificate-icon">
-                                    <img src="/static/img/abbyy-icon.png" alt="abbyy-icon" />
-                                </div>
-                                <h3>ABBYY Vantage Advanced Designer</h3>
-                            </div>
-                        </div>
-                    </div>
+                        ))
+                    }
                 </div>
             </div>
             <Recommendations />

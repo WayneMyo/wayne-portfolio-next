@@ -49,8 +49,8 @@ const Nav: FC<NavProps> = ({ navItems }) => {
     return (
         <nav className={`pages-nav ${toggle ? "pages-nav--open" : ""}`}>
             {
-                navItems.map((item) => (
-                    <div className="pages-nav__item">
+                navItems.map((item, index) => (
+                    <div key={index} className="pages-nav__item">
                         <a className="link link--page" onClick={() => changeNav(item.key, false)}>
                             {item.label}
                         </a>
