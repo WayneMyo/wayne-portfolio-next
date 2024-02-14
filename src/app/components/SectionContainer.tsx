@@ -1,4 +1,6 @@
 import { FC, useContext, ReactNode } from "react";
+import { useSelector } from "react-redux";
+import { Theme } from "../redux/Store";
 import { Context } from "../contexts/Context";
 import SectionTitle from "./SectionTitle";
 
@@ -22,12 +24,12 @@ const SectionContainer: FC<SectionContainerProps> = ({
     children,
 }) => {
     const { nav, changeNav } = useContext(Context);
-
     const activePageClass = (name: string): string => (name === nav ? "" : "page--inactive");
+    const theme = useSelector((state: { theme: { theme: Theme } }) => state.theme).theme;
 
     return (
         <div
-            className={`page ${extraClass} white-bg ${activePageClass(name)}`}
+            className={`page ${extraClass} ${theme === Theme.Dark ? "dark-bg" : "light-bg"} ${activePageClass(name)}`}
             id={name}
             onClick={() => changeNav(name, false)}
         >
@@ -47,7 +49,7 @@ const SectionContainer: FC<SectionContainerProps> = ({
                         </div>
                     </div>
                     <div className="col-lg-9 col-xl-8">
-                        <div className="page-scroll">
+                        <div className={theme === Theme.Dark ? "page-scroll-dark" : "page-scroll-light"}>
                             <div className="page-content">
                                 {/* 
                                     ==========================

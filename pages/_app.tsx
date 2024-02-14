@@ -1,8 +1,10 @@
-import CustomHead from '@/src/app/components/CustomHead';
-import Context from '@/src/app/contexts/Context';
-import Loader from '@/src/app/components/Loader';
-import '@/src/app/styles/globals.css';
-import { useEffect, useState, FC } from 'react';
+import CustomHead from "@/src/app/components/CustomHead";
+import Context from "@/src/app/contexts/Context";
+import Loader from "@/src/app/components/Loader";
+import "@/src/app/styles/globals.css";
+import { useEffect, useState, FC } from "react";
+import { Provider } from "react-redux";
+import { store } from "@/src/app/redux/Store";
 
 interface AppProps {
   Component: FC<any>;
@@ -23,11 +25,13 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
   }, []);
 
   return (
-    <Context>
-      <CustomHead pageTitle='Wayne Myo - Personal Portfolio Site (NextJS)' />
-      {!load && <Loader />}
-      {load1 && <Component {...pageProps} />}
-    </Context>
+    <Provider store={store}>
+      <Context>
+        <CustomHead pageTitle='Wayne Myo - Personal Portfolio Site (NextJS)' />
+        {!load && <Loader />}
+        {load1 && <Component {...pageProps} />}
+      </Context>
+    </Provider>
   );
 };
 

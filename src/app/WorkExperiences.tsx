@@ -1,4 +1,6 @@
 import { FC } from "react";
+import { useSelector } from "react-redux";
+import { Theme } from "./redux/Store";
 import SectionContainer from "./components/SectionContainer";
 import Recommendations from "./Recommendations";
 import { experiences, education, certificates } from "./data/WorkExperiencesData.json";
@@ -6,6 +8,9 @@ import { experiences, education, certificates } from "./data/WorkExperiencesData
 interface ExperiencesProps { }
 
 const Experiences: FC<ExperiencesProps> = () => {
+    const theme = useSelector((state: { theme: { theme: Theme } }) => state.theme).theme;
+    const activeTextClass = theme === Theme.Dark ? "light-color" : "dark-color";
+
     const certificatesByType = certificates.reduce((acc, certificate) => {
         if (!acc[certificate.type]) {
             acc[certificate.type] = [];
@@ -25,14 +30,14 @@ const Experiences: FC<ExperiencesProps> = () => {
             <div className="row">
                 <div className="col-md-6">
                     <div className="resume-row">
-                        <h2 className="theme-after dark-color">Experience</h2>
+                        <h2 className={`theme-after ${activeTextClass}`}>Experience</h2>
                         <ul>
                             {
                                 experiences.map((experience, index) => (
                                     <li key={index}>
                                         <div className="r-name">
                                             <i className="theme-bg ti-briefcase" />
-                                            <span className="dark-color">{experience.title}</span>
+                                            <span className={activeTextClass}>{experience.title}</span>
                                             <label>{experience.date}</label>
                                         </div>
                                         <div className="r-info">
@@ -47,14 +52,14 @@ const Experiences: FC<ExperiencesProps> = () => {
                 {/* col */}
                 <div className="col-md-6">
                     <div className="resume-row">
-                        <h2 className="theme-after dark-color">Education</h2>
+                        <h2 className={`theme-after ${activeTextClass}`}>Education</h2>
                         <ul>
                             {
                                 education.map((education, index) => (
                                     <li key={index}>
                                         <div className="r-name">
                                             <i className="theme-bg ti-book" />
-                                            <span className="dark-color">{education.title}</span>
+                                            <span className={activeTextClass}>{education.title}</span>
                                             <label>{education.date}</label>
                                         </div>
                                         <div className="r-info">
@@ -71,13 +76,13 @@ const Experiences: FC<ExperiencesProps> = () => {
             {/* row */}
             <div className="skill-row m-30px-t sm-m-20px-t">
                 <div className="sub-title m-30px-b">
-                    <h2 className="dark-color theme-after">Certificates</h2>
+                    <h2 className={`theme-after ${activeTextClass}`}>Certificates</h2>
                 </div>
                 <div className="row">
                     {
                         Object.keys(certificatesByType).map((type, index) => (
                             <div key={index} className="col-md-6 p-30px-r sm-p-15px-r">
-                                <h3 className="dark-color">{type}</h3>
+                                <h3 className={activeTextClass}>{type}</h3>
                                 <div className="skills">
                                     {
                                         certificatesByType[type].map((certificate, index) => (

@@ -1,4 +1,6 @@
 import { FC, useContext } from "react";
+import { useSelector } from "react-redux";
+import { Theme } from "./redux/Store";
 import { Context } from "./contexts/Context";
 import TypingAnimations from "./components/TypingAnimations";
 import { welcomeText, animationStrings, socialLinks } from "./data/HomeData.json";
@@ -6,10 +8,11 @@ import { welcomeText, animationStrings, socialLinks } from "./data/HomeData.json
 const Home: FC = () => {
     const { nav, changeNav } = useContext(Context);
     const activePageClass = (pageId: string) => (nav === pageId ? "" : "page--inactive");
+    const theme = useSelector((state: { theme: { theme: Theme } }) => state.theme).theme;
 
     return (
         <div
-            className={`page home-banner white-bg ${activePageClass("home")}`}
+            className={`page ${theme === Theme.Dark ? "home-banner-dark dark-bg" : "home-banner-light light-bg"} ${activePageClass("home")}`}
             id={"home"}
             onClick={() => changeNav("home", false)}
         >
@@ -21,12 +24,12 @@ const Home: FC = () => {
                         </div>
                     </div>
                     <div className="col-lg-9 col-xl-8">
-                        <div className="page-scroll">
+                        <div className={theme === Theme.Dark ? "page-scroll-dark" : "page-scroll-light"}>
                             <div className="page-content">
                                 <div className="v-center-box d-flex align-items-center">
                                     <div className="home-text">
                                         <h6 className="dark-color theme-after">Hi!</h6>
-                                        <h1 className="dark-color blue-after">{welcomeText}</h1>
+                                        <h1 className={`${theme === Theme.Dark ? "light-color" : "dark-color"} blue-after`}>{welcomeText}</h1>
                                         <p>
                                             <TypingAnimations animationStrings={animationStrings} />
                                         </p>

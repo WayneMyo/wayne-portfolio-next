@@ -131,16 +131,27 @@ body.dark-body {
   Scroll Auto
 -----------------------------------*/
 @media (min-width: 992px) {
-  .page-scroll {
+  .page-scroll-light,
+  .page-scroll-dark {
     overflow-y: scroll;
     height: 100vh;
   }
-  .page-scroll:after {
+  .page-scroll-light:after {
     content: "";
     top: 0;
     bottom: 0;
     width: 20px;
     background: #fff;
+    right: 0px;
+    z-index: 1;
+    position: fixed;
+  }
+  .page-scroll-dark:after {
+    content: "";
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: #121616;
     right: 0px;
     z-index: 1;
     position: fixed;
@@ -203,7 +214,10 @@ body.dark-body {
 -----------------------------------*/
 
 .dark-color {
-  color: #292929;
+  color: #121616;
+}
+.light-color {
+  color: #fff;
 }
 .yellow-bg {
   background-color: #f8c964;
@@ -218,10 +232,12 @@ body.dark-body {
   background-color: #2fb3cd;
 }
 
-.white-bg {
+.light-bg {
   background-color: #fff;
 }
-
+.black-bg {
+  background-color: #121616;
+}
 /*---------------------------------
   Page title
 -----------------------------------*/
@@ -473,13 +489,18 @@ body.dark-body {
 .v-center-box {
   min-height: 100%;
 }
-.home-banner {
+.home-banner-light {
   background: #fff;
 }
-.home-banner .page-content .v-center-box {
+.home-banner-dark {
+  background: #121616;
+}
+.home-banner-light .page-content .v-center-box,
+.home-banner-dark .page-content .v-center-box {
   min-height: calc(100vh - 100px);
 }
-.home-banner img {
+.home-banner-light img,
+.home-banner-dark img {
   max-height: 100vh;
   margin: 0 auto;
 }
@@ -542,7 +563,8 @@ body.dark-body {
   margin-top: 20px;
 }
 
-.home-banner .social-icons {
+.home-banner-light .social-icons,
+.home-banner-dark .social-icons {
   position: absolute;
   bottom: 30px;
   right: 40px;
@@ -551,11 +573,13 @@ body.dark-body {
   list-style: none;
 }
 
-.home-banner .social-icons li {
+.home-banner-light .social-icons li,
+.home-banner-dark .social-icons li {
   display: inline-block;
   vertical-align: middle;
 }
-.home-banner .social-icons a {
+.home-banner-light .social-icons a,
+.home-banner-dark .social-icons a {
   width: 38px;
   height: 38px;
   background: #111;
@@ -571,16 +595,19 @@ body.dark-body {
   .home-user-avtar {
     padding-top: 60px;
   }
-  .home-banner .page-content .v-center-box {
+  .home-banner-light .page-content .v-center-box,
+  .home-banner-dark .page-content .v-center-box {
     min-height: inherit;
   }
-  .home-banner .page-content {
+  .home-banner-light .page-content,
+  .home-banner-dark .page-content {
     padding-top: 30px;
   }
   .home-text {
     padding: 20px 20px 70px;
   }
-  .home-banner .social-icons {
+  .home-banner-light .social-icons,
+  .home-banner-dark .social-icons {
     right: auto;
     left: 50px;
   }
@@ -590,7 +617,8 @@ body.dark-body {
   .home-text {
     padding: 10px 10px 60px;
   }
-  .home-banner .social-icons {
+  .home-banner-light .social-icons,
+  .home-banner-dark .social-icons {
     left: 30px;
   }
   .home-text h1 {

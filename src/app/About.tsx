@@ -1,8 +1,13 @@
 import { FC } from 'react';
+import { useSelector } from "react-redux";
+import { Theme } from "./redux/Store";
 import SectionContainer from './components/SectionContainer';
 import { aboutText, featureSkills, counterData } from './data/AboutData.json';
 
 const AboutUs: FC = () => {
+    const theme = useSelector((state: { theme: { theme: Theme } }) => state.theme).theme;
+    const activeTextClass = theme === Theme.Dark ? "light-color" : "dark-color";
+
     return (
         <SectionContainer
             name={'about'}
@@ -19,7 +24,7 @@ const AboutUs: FC = () => {
                 <div className="col-md-8 md-m-30px-t">
                     {/* about-text */}
                     <div className="about-text">
-                        <h3 className="dark-color">{aboutText.title}</h3>
+                        <h3 className={activeTextClass}>{aboutText.title}</h3>
                         <p className="m-0px">
                             {aboutText.text}
                         </p>
@@ -29,9 +34,9 @@ const AboutUs: FC = () => {
                             featureSkills.map((feature, index) => (
                                 <div key={index} className="col-md-6 col-sm-6 m-30px-b">
                                     <div className="feature-box">
-                                        <i className={`icon dark-color theme-after ${feature.icon}`} />
+                                        <i className={`icon ${activeTextClass} theme-after ${feature.icon}`} />
                                         <div className="feature-content">
-                                            <h5 className="dark-color">{feature.title}</h5>
+                                            <h5 className={activeTextClass}>{feature.title}</h5>
                                             <p>
                                                 {feature.text}
                                             </p>

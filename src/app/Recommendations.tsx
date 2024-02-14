@@ -1,4 +1,6 @@
 import { FC, Fragment } from "react";
+import { useSelector } from "react-redux";
+import { Theme } from "./redux/Store";
 import Slider from "react-slick";
 import { recommendations } from "./data/RecommendationsData.json";
 
@@ -43,10 +45,13 @@ const sliderProps: { recommendations: SliderPropsType } = {
 };
 
 const Recommendations: FC = () => {
+  const theme = useSelector((state: { theme: { theme: Theme } }) => state.theme).theme;
+  const activeTextClass = theme === Theme.Dark ? "light-color" : "dark-color";
+
   return (
     <div className="recommendations-section m-30px-t sm-m-20px-t pb-5">
       <div className="sub-title m-30px-b">
-        <h2 className="dark-color theme-after">What People Say?</h2>
+        <h2 className={`theme-after ${activeTextClass}`}>What People Say?</h2>
       </div>
       <Slider {...sliderProps.recommendations}>
         {
