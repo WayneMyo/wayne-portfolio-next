@@ -24,7 +24,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
 
   return (
     <Context>
-      <CustomHead />
+      <CustomHead pageTitle='Wayne Myo - Personal Portfolio Site (NextJS)' />
       {!load && <Loader />}
       {load1 && <Component {...pageProps} />}
     </Context>

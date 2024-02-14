@@ -1,10 +1,15 @@
 import { FC, useEffect } from 'react';
 import Typed from 'typed.js';
 
-const TypingAnimation: FC = () => {
+interface TypingAnimationProps {
+  animationStrings: string[];
+}
+
+
+const TypingAnimation: FC<TypingAnimationProps> = ({ animationStrings }) => {
   useEffect(() => {
     const options = {
-      strings: ['Developer', 'Consultant', 'Cloud Enthusiast'],
+      strings: animationStrings,
       typeSpeed: 50,
       backSpeed: 30,
       loop: true,

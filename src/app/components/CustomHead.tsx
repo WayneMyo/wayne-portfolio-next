@@ -1,7 +1,11 @@
 import { FC } from "react";
 import Head from "next/head";
 
-const CustomHead: FC = () => {
+interface CustomHeadProps {
+  pageTitle: string;
+}
+
+const CustomHead: FC<CustomHeadProps> = ({ pageTitle }) => {
   return (
     <Head>
       <meta charSet="utf-8" />
@@ -11,7 +15,7 @@ const CustomHead: FC = () => {
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
       />
       {/* Page Title */}
-      <title>Wayne Myo - Personal Portfolio Site (NextJS)</title>
+      <title>{pageTitle}</title>
     </Head>
   );
 };

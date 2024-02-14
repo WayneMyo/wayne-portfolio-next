@@ -3,8 +3,6 @@ import dynamic from 'next/dynamic';
 import { Context } from '@/src/app/contexts/Context';
 import Header from '@/src/app/components/Header';
 import Nav from '@/src/app/components/Nav';
-import ImageView from '@/src/app/components/ImageViewer';
-import VideoPopup from '@/src/app/components/VideoPopup';
 
 const Home = dynamic(() => import('@/src/app/Home'));
 const About = dynamic(() => import('@/src/app/About'));
@@ -19,18 +17,23 @@ const Index: FC = () => {
 
   const { toggle } = useContext(Context);
 
+  const navItems = [
+    { key: 'home', label: 'Home' },
+    { key: 'about', label: 'About Me' },
+    { key: 'resume', label: 'Resume' },
+    { key: 'contact', label: 'Contact Me' },
+  ]
+
   return (
     <Fragment>
-      <VideoPopup />
-      <ImageView />
-      <Nav />
+      <Nav navItems={navItems}/>
       <div className={`pages-stack ${toggle ? 'pages-stack--open' : ''}`}>
         <Home />
         <About />
         <WorkExperiences />
         <Contact />
       </div>
-      <Header />
+      <Header logoName='WAYNE MYO' />
     </Fragment>
   );
 };

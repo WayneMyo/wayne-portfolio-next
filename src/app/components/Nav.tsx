@@ -1,7 +1,11 @@
 import { FC, useContext, useEffect, useState } from "react";
 import { Context } from "../contexts/Context";
 
-const Nav: FC = () => {
+interface NavProps {
+    navItems: { key: string; label: string }[];
+}
+
+const Nav: FC<NavProps> = ({ navItems }) => {
     const { changeNav, toggle, nav } = useContext(Context);
     const [activeIndex, setActiveIndex] = useState<number>(0);
 
@@ -44,26 +48,15 @@ const Nav: FC = () => {
 
     return (
         <nav className={`pages-nav ${toggle ? "pages-nav--open" : ""}`}>
-            <div className="pages-nav__item">
-                <a className="link link--page" onClick={() => changeNav("home", false)}>
-                    Home
-                </a>
-            </div>
-            <div className="pages-nav__item">
-                <a className="link link--page" onClick={() => changeNav("about", false)}>
-                    About Me
-                </a>
-            </div>
-            <div className="pages-nav__item">
-                <a className="link link--page" onClick={() => changeNav("resume", false)}>
-                    Resume
-                </a>
-            </div>
-            <div className="pages-nav__item">
-                <a className="link link--page" onClick={() => changeNav("contact", false)}>
-                    Contact Me
-                </a>
-            </div>
+            {
+                navItems.map((item) => (
+                    <div className="pages-nav__item">
+                        <a className="link link--page" onClick={() => changeNav(item.key, false)}>
+                            {item.label}
+                        </a>
+                    </div>
+                ))
+            }
         </nav>
     );
 };

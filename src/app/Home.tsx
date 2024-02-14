@@ -6,6 +6,7 @@ const Home: FC = () => {
     const { nav, changeNav } = useContext(Context);
 
     const activePageClass = (pageId: string) => (nav === pageId ? "" : "page--inactive");
+    const animationStrings = ['Developer', 'Consultant', 'Cloud Enthusiast'];
 
     return (
         <div
@@ -28,7 +29,7 @@ const Home: FC = () => {
                                         <h6 className="dark-color theme-after">Hi!</h6>
                                         <h1 className="dark-color blue-after">I&apos;m Wayne</h1>
                                         <p>
-                                            <TypingAnimations />
+                                            <TypingAnimations animationStrings={animationStrings}/>
                                         </p>
                                         <div className="btn-bar">
                                             <a href="/static/Wai-Yan-Khine-Myo-Resume.pdf" download className="btn btn-theme">

@@ -1,12 +1,16 @@
 import { FC, useContext } from "react";
 import { Context } from "../contexts/Context";
 
-const Header: FC = () => {
+interface HeaderProps {
+  logoName: string;
+}
+
+const Header: FC<HeaderProps> = ({ logoName }) => {
   const { changeNav, nav, toggle } = useContext(Context);
 
   return (
     <header className="header theme-bg">
-      <div className="logo">WAYNE MYO</div>
+      <div className="logo">{logoName}</div>
       <div className="menu-toggle">
         <button
           className={`menu-button ${toggle ? "menu-button--open" : ""}`}
