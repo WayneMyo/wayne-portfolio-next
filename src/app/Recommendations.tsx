@@ -1,6 +1,45 @@
 import { FC } from "react";
 import Slider from "react-slick";
-import { SliderProps } from "./components/SliderProps"
+
+interface SliderPropsType {
+  dots: boolean;
+  infinite: boolean;
+  autoplay: boolean;
+  slidesToShow: number;
+  slidesToScroll: number;
+  initialSlide: number;
+  responsive: {
+    breakpoint: number;
+    settings: {
+      slidesToShow: number;
+      slidesToScroll: number;
+      infinite: boolean;
+      dots: boolean;
+    };
+  }[];
+};
+
+const sliderProps: { recommendations: SliderPropsType } = {
+  recommendations: {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1150,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
+  },
+};
 
 const Recommendations: FC = () => {
   return (
@@ -8,7 +47,7 @@ const Recommendations: FC = () => {
       <div className="sub-title m-30px-b">
         <h2 className="dark-color theme-after">What People Say?</h2>
       </div>
-      <Slider {...SliderProps.recommendations}>
+      <Slider {...sliderProps.recommendations}>
         <div className="recommendations-col">
           <div className="say">
             <p>
