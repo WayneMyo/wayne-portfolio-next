@@ -5,9 +5,7 @@ const AboutUs: FC = () => {
     const aboutText = {
         title: 'I\'m Wayne Myo',
         text: `I'm a senior consultant at the Journey to Cloud team within NCS Group - a leading technology services firm in the Asia Pacific region,
-            I bring a wealth of experience in technology consulting, cloud solutions architecture and full-stack software development.
-            With a graduate diploma in Systems Analysis from the Institute of System Science (NUS), I graduated in 2020, laying the foundation for
-            a successful career switch to software engineering from semiconductor engineering.`
+            I bring a wealth of experience in technology consulting, cloud solutions architecture and full-stack software development.`
     };
 
     const featureSkills = [
