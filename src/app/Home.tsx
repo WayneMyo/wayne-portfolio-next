@@ -1,34 +1,11 @@
 import { FC, useContext } from "react";
 import { Context } from "./contexts/Context";
 import TypingAnimations from "./components/TypingAnimations";
+import { welcomeText, animationStrings, socialLinks } from "./data/HomeData.json";
 
 const Home: FC = () => {
     const { nav, changeNav } = useContext(Context);
-
     const activePageClass = (pageId: string) => (nav === pageId ? "" : "page--inactive");
-
-    const welcomeText = 'I\'m Wayne';
-    const animationStrings = ['Developer', 'Consultant', 'Cloud Enthusiast'];
-    const socialLinks = [
-        {
-            key: "linkedin",
-            icon: "fab fa-linkedin-in",
-            link: "https://www.linkedin.com/in/wayne-myo/",
-            title: "LinkedIn"
-        },
-        {
-            key: "github",
-            icon: "fab fa-github",
-            link: "https://github.com/WayneMyo",
-            title: "GitHub"
-        },
-        {
-            key: "instagram",
-            icon: "fab fa-instagram",
-            link: "https://www.instagram.com/wayne_stayprovocative",
-            title: "Instagram"
-        }
-    ];
 
     return (
         <div

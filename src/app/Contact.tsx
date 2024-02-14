@@ -1,26 +1,9 @@
+import { FC } from "react";
 import SectionContainer from "./components/SectionContainer";
 import Map from "./components/Map";
+import { contactText, contactDetails } from "./data/ContactData.json";
 
-const Contact: React.FC = () => {
-    const contactText = `I'm currently open to new opportunities and I'm always interested in meeting new people. 
-        Whether you're looking to strengthen your team, seeking consultation, or just want to connect, feel free to reach out. 
-        I'll get back to you as soon as I can.`;
-
-    const contactDetails = [
-        {
-            icon: "ti-mobile",
-            title: "Phone",
-            text: "+65 88684394",
-            link: "https://wa.me/6588684394"
-        },
-        {
-            icon: "ti-email",
-            title: "Email",
-            text: "waiyankm93@gmail.com",
-            link: "mailto:waiyankm93@gmail.com"
-        }
-    ];
-
+const Contact: FC = () => {
     return (
         <SectionContainer
             name={"contact"}

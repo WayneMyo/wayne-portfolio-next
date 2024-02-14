@@ -1,53 +1,8 @@
 import { FC } from 'react';
 import SectionContainer from './components/SectionContainer';
+import { aboutText, featureSkills, counterData } from './data/AboutData.json';
 
 const AboutUs: FC = () => {
-    const aboutText = {
-        title: 'I\'m Wayne Myo',
-        text: `I'm a senior consultant at the Journey to Cloud team within NCS Group - a leading technology services firm in the Asia Pacific region,
-            I bring a wealth of experience in technology consulting, cloud solutions architecture and full-stack software development.`
-    };
-
-    const featureSkills = [
-        {
-            icon: 'ti-desktop',
-            title: 'Software Development',
-            text: `Experienced Software Engineer and team lead with proficiency in JavaScript, TypeScript and Python.
-            I have professional experiences in front-end technologies such as ReactJS, VueJS and server-side technologies such as
-            NodeJS, Django, Flask and FastAPI.`
-        },
-        {
-            icon: 'ti-cloud',
-            title: 'Cloud Engineering',
-            text: `Specialized in cloud solution architecture on Azure & AWS with a primary focus on GCC (Government on Commercial Cloud) projects.
-            Successfully collaborated with multiple government agencies, ranging from Proof of Concepts (POCs) and prototypes through full-scale implementations.
-            Demonstrated expertise in solution design and proposal, partnering with industry leaders to deliver business value in Semantic Search Engines & IDP solutions.`
-        }
-    ];
-
-    const counterData = [
-        {
-            icon: 'ti-face-smile',
-            count: 3,
-            title: 'Years of Experience'
-        },
-        {
-            icon: 'ti-book',
-            count: 5,
-            title: 'Cloud Certifications'
-        },
-        {
-            icon: 'ti-flag',
-            count: 3,
-            title: 'Projects'
-        },
-        {
-            icon: 'ti-light-bulb',
-            count: 7,
-            title: 'POCs/Demos Conducted'
-        }
-    ];
-
     return (
         <SectionContainer
             name={'about'}

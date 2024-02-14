@@ -1,0 +1,93 @@
+{
+    "experiences": [
+        {
+            "title": "Senior Consultant - NCS Group",
+            "date": "May 2022 - Present",
+            "description": "Senior consultant at Journey to Cloud team. Collaborated with multiple government agencies to conduct customer workshops and drive POC development initiatives. Successfully delivered on-prem Data Migration to Azure GCC1.0 for a large government educational institute."
+        },
+        {
+            "title": "Software Developer Manager - Novade Solutions",
+            "date": "Feb 2021 - May 2022",
+            "description": "Led a team of 5 developers to develop and maintain 4 core modules of Novade Enterprise Platform. Developed custom projects for key clients - site cost management application and dashboard for UP-Bihar National Expressway in India."
+        },
+        {
+            "title": "Application Developer (Intern) - National University Health System (NUHS)",
+            "date": "Sep 2020 - Feb 2021",
+            "description": "Developed a serverless clinical AI chatbot by leveraging Amazon Lex, Amazon Elasticsearch, Lambda functions and Twilio APIs. Developed real-time chat modules using web sockets and Django - VueJS stack."
+        },
+        {
+            "title": "Technical Specialist - Micron Technology",
+            "date": "Mar 2016 - Feb 2020",
+            "description": "Led and mentored a team of 8 technicians, initiated improvement projects, and solved complex equipment issues."
+        },
+        {
+            "title": "Sales Engineer - SMC Singapore SAMVIPC",
+            "date": "Sep 2020 - Feb 2021",
+            "description": "Managed key clients and distributors, increasing total sales by 15%, and resolved technical and quality related matters for customers, ensuring customer satisfaction."
+        }
+    ],
+    "education": [
+        {
+            "title": "Institute of Systems Science (ISS) - NUS",
+            "date": "Feb 2020 - Feb 2021",
+            "description": "Graduate Diploma, Systems Analysis"
+        },
+        {
+            "title": "Coventry University",
+            "date": "June 2015 - June 2017",
+            "description": "Bachelor of Engineering with Honors, Mechanical Engineering"
+        },
+        {
+            "title": "Ngee Ann Polytechnic",
+            "date": "Feb 2011 - Feb 2014",
+            "description": "Diploma, Automation & Mechatronics Systems"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "AWS Certified Solutions Architect – Associate",
+            "img": "/static/img/aws-icon.png",
+            "type": "Cloud Certifications"
+        },
+        {
+            "title": "AWS Certified Developer – Associate",
+            "img": "/static/img/aws-icon.png",
+            "type": "Cloud Certifications"
+        },
+        {
+            "title": "AWS File Storage Specialized",
+            "img": "/static/img/aws-icon.png",
+            "type": "Cloud Certifications"
+        },
+        {
+            "title": "AWS Certified Cloud Practitioner",
+            "img": "/static/img/aws-icon.png",
+            "type": "Cloud Certifications"
+        },
+        {
+            "title": "Microsoft Certified Azure Fundamentals",
+            "img": "/static/img/msft-icon.png",
+            "type": "Cloud Certifications"
+        },
+        {
+            "title": "Google Advanced Data Analytics Certificate",
+            "img": "/static/img/google-icon.png",
+            "type": "Others"
+        },
+        {
+            "title": "IBM Data Science Professional Certificate",
+            "img": "/static/img/ibm-icon.png",
+            "type": "Others"
+        },
+        {
+            "title": "ABBYY Vantage Certified Business Analyst",
+            "img": "/static/img/abbyy-icon.png",
+            "type": "Others"
+        },
+        {
+            "title": "ABBYY Vantage Advanced Designer",
+            "img": "/static/img/abbyy-icon.png",
+            "type": "Others"
+        }
+    ]
+}
