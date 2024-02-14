@@ -7,41 +7,30 @@ const Nav: FC = () => {
 
     useEffect(() => {
         const pages = document.querySelectorAll<HTMLElement>(".page");
+        const pageLength = pages.length;
+        const startingDistance = 400;
 
         pages.forEach((page, index) => {
             page.style.opacity = "0";
             page.style.zIndex = "2";
-            page.style.transform = `translate3d(0px, 75%, -500px)`;
+            page.style.transform = `translate3d(0px, 75%, -{startingDistance}px)`;
 
             if (toggle) {
                 if (nav === page.id) {
                     setActiveIndex(index);
                     page.style.zIndex = "5";
-                    page.style.transform = `translate3d(0px, 75%, -550px)`;
+                    page.style.transform = `translate3d(0px, 75%, -${startingDistance + 50}px)`;
                     page.style.opacity = "1";
                 }
 
-                let next =
-                    pages.length - 1 === activeIndex
-                        ? pages[0]
-                        : pages.length - 2 === activeIndex
-                            ? pages[activeIndex + 1]
-                            : pages[activeIndex + 1];
-
-                let next2 =
-                    pages.length - 1 === activeIndex
-                        ? pages[1]
-                        : pages.length - 2 === activeIndex
-                            ? pages[0]
-                            : pages[activeIndex + 2];
-
-                next.style.zIndex = "4";
-                next.style.transform = `translate3d(0px, 75%, -650px)`;
-                next.style.opacity = "0.9";
-
-                next2.style.zIndex = "3";
-                next2.style.transform = `translate3d(0px, 75%, -750px)`;
-                next2.style.opacity = "0.7";
+                const distance = Array.from({ length: pageLength - 1 }, (_, i) => startingDistance + 135 * (i + 1) + 50);
+                for (let i = 0; i < pageLength - 1; i++) {
+                    const nextIndex = (activeIndex + i + 1) % pageLength;
+                    const next = pages[nextIndex];
+                    next.style.zIndex = (pageLength - i).toString();
+                    next.style.transform = `translate3d(0px, 75%, -${distance[i]}px)`;
+                    next.style.opacity = (0.9 - i * 0.1).toString();
+                }
             } else {
                 if (nav === page.id) {
                     setActiveIndex(index);
