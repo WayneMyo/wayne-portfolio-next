@@ -61,7 +61,7 @@ const Home: FC = () => {
                                         {
                                             socialLinks.map((social, index) => (
                                                 <li key={index}>
-                                                    <a className={social.key} href={social.link} target="_blank" rel="noopener noreferrer">
+                                                    <a className={`${social.key} mx-1`} href={social.link} target="_blank" rel="noopener noreferrer">
                                                         <i className={social.icon} />
                                                     </a>
                                                 </li>

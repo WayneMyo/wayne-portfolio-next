@@ -10,7 +10,7 @@ const Experiences: FC<ExperiencesProps> = () => {
             title: "Senior Consultant - NCS Group",
             date: "May 2022 - Present",
             description: `Senior consultant at Journey to Cloud team. Collaborated with multiple government agencies to 
-                conduct customer workshops and drive rapic POC development initiatives. Successfully delivered on-prem 
+                conduct customer workshops and drive POC development initiatives. Successfully delivered on-prem 
                 Data Migration to Azure GCC1.0 for a large government educational institute.`
         },
         {

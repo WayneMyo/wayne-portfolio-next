@@ -35,7 +35,12 @@ const SectionContainer: FC<SectionContainerProps> = ({
                 <div className="row no-gutters">
                     <div
                         className="col-lg-3 col-xl-4 page-title"
-                        style={{ backgroundImage: `url(${leftImage})` }}
+                        style={{
+                            backgroundImage: `url(${leftImage})`,
+                            backgroundSize: "cover",
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center center",
+                        }}
                     >
                         <div className="v-center-box d-flex align-items-end">
                             <h2>{leftImageTitle ? leftImageTitle : title}</h2>
