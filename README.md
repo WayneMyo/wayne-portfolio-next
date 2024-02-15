@@ -1,43 +1,45 @@
 # Wayne's Portfolio Documentation
 
 ## Project Structure Overview
+```
 /wayne-portfolio
 ├── /.next # Next.js build output (ignored in .gitignore)
 ├── /node_modules # Node.js modules (ignored in .gitignore)
 ├── /out # Static Build output (ignored in .gitignore)
 ├── /pages
-│ ├── _app.tsx # Custom App component
-│ ├── _document.tsx # Custom Document component with stylesheets imported
-│ └── index.tsx # Home page with pages and components imported
+│   ├── _app.tsx # Custom App component
+│   ├── _document.tsx # Custom Document component with stylesheets imported
+│   └── index.tsx # Home page with pages and components imported
 ├── /public
-│ ├── /static
-│   ├── /css
-        |── /color # Color variables (theme colors) for the entire application
-│       ├── styles.css # Stylesheet for the entire application
-│   ├── /images
-│   ├── /plugin
-│   └── /Wai-Yan-Khine-Myo-Resume.pdf # Resume file for download
-│ ├── favicon.ico # Website favicon
+│   ├── /static
+│   │   ├── /css
+│   │   │   ├── /color # Color variables (theme colors) for the entire application
+│   │   │   │   ├── styles.css # Stylesheet for the entire application
+│   │   ├── /images
+│   │   ├── /plugin
+│   │   └── /Wai-Yan-Khine-Myo-Resume.pdf # Resume file for download
+│   ├── favicon.ico # Website favicon
 ├── /src # Source code directory
-│ ├── /app # React components and pages
-│   ├── /components # Reusable UI components
-│   ├── /contexts # Contexts for state management
-│   ├── /data # Data used in the application
-│   ├── /redux # Redux store and slices
-│   ├── About.tsx # About page
-│   ├── Contact.tsx # Contact page
-│   ├── Home.tsx # Home page
-│   ├── Recommendations.tsx # Recommendations page
-│   ├── Utils.tsx # Utility functions
-│   └── WorkExperience.tsx # Work Experience page
+│   ├── /app # React components and pages
+│   │   ├── /components # Reusable UI components
+│   │   ├── /contexts # Contexts for state management
+│   │   ├── /data # Data used in the application
+│   │   ├── /redux # Redux store and slices
+│   │   ├── About.tsx # About page
+│   │   ├── Contact.tsx # Contact page
+│   │   ├── Home.tsx # Home page
+│   │   ├── Recommendations.tsx # Recommendations page
+│   │   ├── Utils.tsx # Utility functions
+│   │   └── WorkExperience.tsx # Work Experience page
 ├── .eslintrc.js # ESLint configuration
 ├── .gitignore # Git ignore file
 ├── next-env.d.ts # Next.js types
 ├── next.config.mjs # Next.js configuration
 ├── package-lock.json # Node.js package manager lock file
-├── package.json # Node.js package manager file - Scripts such as dev, build, start, lint and deploy (aws s3 sync) are defined here
+├── package.json # Node.js package manager file - Scripts such as dev, build, start, lint, and deploy (aws s3 sync) are defined here
 ├── README.md # Project documentation
 └── tsconfig.json # TypeScript configuration
+```
 
 ## Packages Used
 - @emotion/react # React simple styling library
