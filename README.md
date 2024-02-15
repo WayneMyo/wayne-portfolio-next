@@ -14,7 +14,7 @@
 │   ├── /static
 │   │   ├── /css
 │   │   │   ├── /color # Color variables (theme colors) for the entire application
-│   │   │   │   ├── styles.css # Stylesheet for the entire application
+│   │   │   └── styles.css # Stylesheet for the entire application
 │   │   ├── /images
 │   │   ├── /plugin
 │   │   └── /Wai-Yan-Khine-Myo-Resume.pdf # Resume file for download
