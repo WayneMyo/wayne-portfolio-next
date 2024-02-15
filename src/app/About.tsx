@@ -67,7 +67,7 @@ const AboutUs: FC = () => {
                                 <div className="counter-col counter-box">
                                     <div className="counter-data" data-count={counter.count}>
                                         <i className={`theme-color ${counter.icon}`} />
-                                        <div className="count dark-color">{counter.count}+</div>
+                                        <div className={`count ${activeTextClass}`}>{counter.count}+</div>
                                         <h6>{counter.title}</h6>
                                     </div>
                                 </div>
