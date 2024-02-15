@@ -1,5 +1,14 @@
 # Wayne's Portfolio Documentation
 
+![Homepage - Light](https://github.com/WayneMyo/wayne-portfolio-next/assets/57591039/4057d8a3-19b7-4a22-81cc-af0797db458f)
+*Caption: This is the homepage (Light mode) of my portfolio.*
+
+![Homepage - Dark](https://github.com/WayneMyo/wayne-portfolio-next/assets/57591039/d5f5601a-c114-4c1a-86b6-4baf58fe3d8f)
+*Caption: This is the homepage (Dark mode) of my portfolio.*
+
+## Visit My Portfolio
+Check out my portfolio site [here](https://wayne-myo.net/).
+
 ## Project Structure Overview
 ```
 /wayne-portfolio
