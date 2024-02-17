@@ -12,7 +12,14 @@ const Nav: FC<NavProps> = ({ navItems }) => {
     useEffect(() => {
         const pages = document.querySelectorAll<HTMLElement>(".page");
         const pageLength = pages.length;
-        const startingDistance = 400;
+        let startingDistance = 400;
+        let gapDistance = 135;
+
+        // Set different starting distance for mobile screens
+        if (window.innerWidth <= 768) {
+            startingDistance = 50;
+            gapDistance = 50;
+        }
 
         pages.forEach((page, index) => {
             page.style.opacity = "0";
@@ -23,11 +30,11 @@ const Nav: FC<NavProps> = ({ navItems }) => {
                 if (nav === page.id) {
                     setActiveIndex(index);
                     page.style.zIndex = "5";
-                    page.style.transform = `translate3d(0px, 75%, -${startingDistance + 50}px)`;
+                    page.style.transform = `translate3d(0px, 75%, -${startingDistance}px)`;
                     page.style.opacity = "1";
                 }
 
-                const distance = Array.from({ length: pageLength - 1 }, (_, i) => startingDistance + 135 * (i + 1) + 50);
+                const distance = Array.from({ length: pageLength - 1 }, (_, i) => startingDistance + gapDistance * (i + 1));
                 for (let i = 0; i < pageLength - 1; i++) {
                     const nextIndex = (activeIndex + i + 1) % pageLength;
                     const next = pages[nextIndex];
