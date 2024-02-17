@@ -20,10 +20,6 @@ Table of contents
 /*---------------------------------
   01. Common
 -----------------------------------*/
-.container-fluid {
-  margin-bottom: 100px;
-}
-
 body {
   font-family: "Work Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -161,7 +157,6 @@ body.dark-body {
     position: fixed;
   }
 }
-
 .page-content {
   padding: 50px;
   max-width: 1200px;
@@ -310,10 +305,10 @@ body.dark-body {
 /*---------------------------------
   Section Title
 -----------------------------------*/
-.section-title {
+.section-titel {
   margin: 0 0 40px;
 }
-.section-title h6 {
+.section-titel h6 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -325,7 +320,7 @@ body.dark-body {
   margin: 0 0 8px;
   text-transform: uppercase;
 }
-.section-title h6:after {
+.section-titel h6:after {
   top: 0;
   bottom: 0;
   left: 0;
@@ -337,7 +332,7 @@ body.dark-body {
   -webkit-transform: skew(-20deg);
 }
 
-.section-title h2 {
+.section-titel h2 {
   font-size: 45px;
   font-weight: 700;
   position: relative;
@@ -350,7 +345,7 @@ body.dark-body {
   margin: 0;
 }
 
-.section-title h2:after {
+.section-titel h2:after {
   height: 8px;
   width: 50px;
   bottom: -4px;
@@ -391,21 +386,21 @@ body.dark-body {
 }
 
 @media (max-width: 1200px) {
-  .section-title h6 {
+  .section-titel h6 {
     padding: 3px 8px;
     letter-spacing: 2px;
     font-size: 10px;
   }
-  .section-title h2 {
+  .section-titel h2 {
     font-size: 35px;
   }
 }
 
 @media (max-width: 991px) {
-  .section-title h2 {
+  .section-titel h2 {
     font-size: 30px;
   }
-  .section-title {
+  .section-titel {
     margin: 0 0 30px;
   }
 }
