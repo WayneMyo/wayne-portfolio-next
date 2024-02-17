@@ -1,9 +1,14 @@
 import { FC } from "react";
+import { useSelector } from "react-redux";
+import { Theme } from "./redux/Store";
 import SectionContainer from "./components/SectionContainer";
 import Map from "./components/Map";
 import { contactText, contactDetails } from "./data/ContactData.json";
 
 const Contact: FC = () => {
+    const theme = useSelector((state: { theme: { theme: Theme } }) => state.theme).theme;
+    const activeTextClass = theme === Theme.Dark ? "light-color" : "dark-color";
+
     return (
         <SectionContainer
             name={"contact"}
@@ -22,9 +27,9 @@ const Contact: FC = () => {
                 {
                     contactDetails.map((contact, index) => (
                         <div key={index} className="col-md-4 m-15px-tb">
-                            <div className="contact-info">
+                            <div className={`contact info ${theme === Theme.Dark ? "contact-info-dark" : "contact-info-light"}`}>
                                 <i className={`theme-color ${contact.icon}`} />
-                                <h6 className="dark-color font-alt">{contact.title}</h6>
+                                <h6 className={`${activeTextClass} font-alt`}>{contact.title}</h6>
                                 <p>
                                     <a href={contact.link} target="_blank" rel="noopener noreferrer">{contact.text}</a>
                                 </p>

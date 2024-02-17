@@ -56,7 +56,7 @@ const Recommendations: FC = () => {
       <Slider {...sliderProps.recommendations}>
         {
           recommendations.map((recommendation, index) => (
-            <div key={index} className="recommendations-col">
+            <div key={index} className={`recommendations-col ${theme === Theme.Dark ? "recommendations-col-dark" : "recommendations-col-light"}`}>
               <div className="say">
                 {recommendation.say.map((paragraph, i) => (
                   <Fragment key={i}>
