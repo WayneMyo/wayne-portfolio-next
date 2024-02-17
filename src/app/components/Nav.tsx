@@ -12,7 +12,12 @@ const Nav: FC<NavProps> = ({ navItems }) => {
     useEffect(() => {
         const pages = document.querySelectorAll<HTMLElement>(".page");
         const pageLength = pages.length;
-        const startingDistance = 400;
+        let startingDistance = 400;
+
+        // Set different starting distance for mobile screens
+        if (window.innerWidth <= 991) {
+            startingDistance = 50;
+        }
 
         pages.forEach((page, index) => {
             page.style.opacity = "0";

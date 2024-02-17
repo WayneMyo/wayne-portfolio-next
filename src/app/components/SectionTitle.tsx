@@ -12,7 +12,7 @@ const SectionTitle: FC<SectionTitleProps> = ({ title, subTitle }) => {
   const activeTextClass = theme === Theme.Dark ? "light-color" : "dark-color";
 
   return (
-    <div className="section-titel">
+    <div className="section-title">
       <h6 className="theme-after dark-color">{subTitle}</h6>
       <div className="st-title">
         <h2 className={`theme-after ${activeTextClass}`}>{title}</h2>
