@@ -1,4 +1,4 @@
-# Wayne's Portfolio Documentation
+# Wayne's Portfolio (NextJS) Documentation
 
 ![Homepage - Light](https://github.com/WayneMyo/wayne-portfolio-next/assets/57591039/4057d8a3-19b7-4a22-81cc-af0797db458f)
 *Caption: This is the homepage (Light mode) of my portfolio.*
