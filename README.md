@@ -20,7 +20,7 @@ Check out my portfolio site [here](https://wayne-myo.net/).
 
 ## Project Structure Overview
 ```
-/wayne-portfolio
+/wayne-portfolio-next
 ├── /.next # Next.js build output (ignored in .gitignore)
 ├── /node_modules # Node.js modules (ignored in .gitignore)
 ├── /out # Static Build output (ignored in .gitignore)
