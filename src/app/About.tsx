@@ -1,10 +1,11 @@
-import { FC } from 'react';
+import { FC } from "react";
 import { useSelector } from "react-redux";
 import { Theme } from "./redux/Store";
-import SectionContainer from './components/SectionContainer';
-import { aboutText, featureSkills, counterData } from './data/AboutData.json';
+import SectionContainer from "./components/SectionContainer";
+import AboutData from "./data/AboutData.json";
 
 const AboutUs: FC = () => {
+    const { aboutText, featureSkills, counterData } = AboutData;
     const theme = useSelector((state: { theme: { theme: Theme } }) => state.theme).theme;
     const activeTextClass = theme === Theme.Dark ? "light-color" : "dark-color";
 

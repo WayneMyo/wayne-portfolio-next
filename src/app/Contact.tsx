@@ -3,9 +3,10 @@ import { useSelector } from "react-redux";
 import { Theme } from "./redux/Store";
 import SectionContainer from "./components/SectionContainer";
 import Map from "./components/Map";
-import { contactText, contactDetails } from "./data/ContactData.json";
+import ContactData from "./data/ContactData.json";
 
 const Contact: FC = () => {
+    const { contactText, contactDetails } = ContactData;
     const theme = useSelector((state: { theme: { theme: Theme } }) => state.theme).theme;
     const activeTextClass = theme === Theme.Dark ? "light-color" : "dark-color";
 

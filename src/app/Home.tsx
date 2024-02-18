@@ -3,9 +3,10 @@ import { useSelector } from "react-redux";
 import { Theme } from "./redux/Store";
 import { Context } from "./contexts/Context";
 import TypingAnimations from "./components/TypingAnimations";
-import { welcomeText, animationStrings, socialLinks } from "./data/HomeData.json";
+import HomeData from "./data/HomeData.json";
 
 const Home: FC = () => {
+    const { welcomeText, animationStrings, socialLinks } = HomeData;
     const { nav, changeNav } = useContext(Context);
     const activePageClass = (pageId: string) => (nav === pageId ? "" : "page--inactive");
     const theme = useSelector((state: { theme: { theme: Theme } }) => state.theme).theme;

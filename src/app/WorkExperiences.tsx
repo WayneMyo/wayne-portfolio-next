@@ -3,11 +3,12 @@ import { useSelector } from "react-redux";
 import { Theme } from "./redux/Store";
 import SectionContainer from "./components/SectionContainer";
 import Recommendations from "./Recommendations";
-import { experiences, education, certificates } from "./data/WorkExperiencesData.json";
+import WorkExperiencesData from "./data/WorkExperiencesData.json";
 
 interface ExperiencesProps { }
 
 const Experiences: FC<ExperiencesProps> = () => {
+    const { experiences, education, certificates } = WorkExperiencesData;
     const theme = useSelector((state: { theme: { theme: Theme } }) => state.theme).theme;
     const activeTextClass = theme === Theme.Dark ? "light-color" : "dark-color";
 
@@ -88,7 +89,7 @@ const Experiences: FC<ExperiencesProps> = () => {
                                         certificatesByType[type].map((certificate, index) => (
                                             <div key={index} className="certificate-item">
                                                 <div className="certificate-icon">
-                                                    <img src={certificate.img} alt='cert-icon' />
+                                                    <img src={certificate.img} alt="cert-icon" />
                                                 </div>
                                                 <h3>{certificate.title}</h3>
                                             </div>

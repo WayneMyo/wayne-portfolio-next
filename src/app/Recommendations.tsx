@@ -1,8 +1,9 @@
+import Image from "next/image";
 import { FC, Fragment } from "react";
 import { useSelector } from "react-redux";
 import { Theme } from "./redux/Store";
 import Slider from "react-slick";
-import { recommendations } from "./data/RecommendationsData.json";
+import RecommendationsData from "./data/RecommendationsData.json";
 
 interface SliderPropsType {
   dots: boolean;
@@ -45,6 +46,7 @@ const sliderProps: { recommendations: SliderPropsType } = {
 };
 
 const Recommendations: FC = () => {
+  const { recommendations } = RecommendationsData;
   const theme = useSelector((state: { theme: { theme: Theme } }) => state.theme).theme;
   const activeTextClass = theme === Theme.Dark ? "light-color" : "dark-color";
 
@@ -67,7 +69,7 @@ const Recommendations: FC = () => {
               </div>
               <div className="user">
                 <div className="img">
-                  <img src={recommendation.img} alt="user-pic" />
+                  <Image src={recommendation.img} alt="user-pic" width={60} height={60} />
                 </div>
                 <div className="name ml-2">
                   <span>{recommendation.name}</span>
