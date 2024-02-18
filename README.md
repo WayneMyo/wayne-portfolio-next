@@ -9,6 +9,15 @@
 ## Visit My Portfolio
 Check out my portfolio site [here](https://wayne-myo.net/).
 
+## Hosting Information
+### Custom Domain
+- Domain: [wayne-myo.net](https://wayne-myo.net/)
+- SSL: Enabled (HTTPS)
+
+### Hosting Provider
+- AWS Amplify
+- Deployment: Automatic deployments triggered on push to the main branch.
+
 ## Project Structure Overview
 ```
 /wayne-portfolio
