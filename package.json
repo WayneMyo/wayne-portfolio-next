@@ -1,6 +1,6 @@
 {
   "name": "wayne-portfolio",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -33,5 +33,8 @@
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20.11.0"
   }
 }
