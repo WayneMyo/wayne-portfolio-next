@@ -19,7 +19,7 @@ const TypingAnimation: FC<TypingAnimationProps> = ({ animationStrings }) => {
     return () => {
       typed.destroy();
     };
-  }, []);
+  }, [animationStrings]);
 
   return <span className="type-it"></span>;
 };

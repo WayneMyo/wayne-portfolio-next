@@ -1,16 +1,30 @@
-import { FC, useContext } from "react";
-import { useSelector } from "react-redux";
-import { Theme } from "./redux/Store";
+import { FC, useContext, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Theme, setSiteData, SiteData } from "./redux/Store";
 import { Context } from "./contexts/Context";
 import TypingAnimations from "./components/TypingAnimations";
-import HomeData from "./data/HomeData.json";
+import { fetchSiteData } from "./services/SiteDataService";
 
 const Home: FC = () => {
-    const { welcomeText, animationStrings, socialLinks } = HomeData;
+    const dispatch = useDispatch();
     const { nav, changeNav } = useContext(Context);
     const activePageClass = (pageId: string) => (nav === pageId ? "" : "page--inactive");
     const theme = useSelector((state: { theme: { theme: Theme } }) => state.theme).theme;
 
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await fetchSiteData();
+                dispatch(setSiteData(data));
+            } catch (error) {
+                console.error('Error fetching site data:', error);
+            }
+        };
+        fetchData();
+    }, [dispatch]);
+
+    const { homeText, socialLink } = useSelector((state: { siteData: SiteData }) => state.siteData);
+    
     return (
         <div
             className={`page ${theme === Theme.Dark ? "home-banner-dark dark-bg" : "home-banner-light light-bg"} ${activePageClass("home")}`}
@@ -30,9 +44,9 @@ const Home: FC = () => {
                                 <div className="v-center-box d-flex align-items-center">
                                     <div className="home-text">
                                         <h6 className="dark-color theme-after">Hi!</h6>
-                                        <h1 className={`${theme === Theme.Dark ? "light-color" : "dark-color"} blue-after`}>{welcomeText}</h1>
+                                        <h1 className={`${theme === Theme.Dark ? "light-color" : "dark-color"} blue-after`}>{homeText.text}</h1>
                                         <p>
-                                            <TypingAnimations animationStrings={animationStrings} />
+                                            <TypingAnimations animationStrings={homeText.animationStrings} />
                                         </p>
                                         <div className="btn-bar">
                                             <a href="/static/Wai-Yan-Khine-Myo-Resume.pdf" download className="btn btn-theme">Download CV</a>
@@ -40,7 +54,7 @@ const Home: FC = () => {
                                     </div>
                                     <ul className="social-icons">
                                         {
-                                            socialLinks.map((social, index) => (
+                                            socialLink.map((social, index) => (
                                                 <li key={index}>
                                                     <a className={`${social.key} mx-1`} href={social.link} target="_blank" rel="noopener noreferrer">
                                                         <i className={social.icon} />

@@ -1,13 +1,12 @@
 import { FC } from "react";
 import { useSelector } from "react-redux";
-import { Theme } from "./redux/Store";
+import { Theme, SiteData } from "./redux/Store";
 import SectionContainer from "./components/SectionContainer";
 import Map from "./components/Map";
-import ContactData from "./data/ContactData.json";
 
 const Contact: FC = () => {
-    const { contactText, contactDetails } = ContactData;
     const theme = useSelector((state: { theme: { theme: Theme } }) => state.theme).theme;
+    const siteData = useSelector((state: { siteData: SiteData }) => state.siteData);
     const activeTextClass = theme === Theme.Dark ? "light-color" : "dark-color";
 
     return (
@@ -20,13 +19,13 @@ const Contact: FC = () => {
             <div className="row">
                 <div className="col-md-16 m-15px-lr">
                     <div className="about-text">
-                        <p>{contactText}</p>
+                        <p>{siteData.contactText.text}</p>
                     </div>
                 </div>
             </div>
             <div className="row">
                 {
-                    contactDetails.map((contact, index) => (
+                    siteData.contactDetail.map((contact, index) => (
                         <div key={index} className="col-md-4 m-15px-tb">
                             <div className={`contact info ${theme === Theme.Dark ? "contact-info-dark" : "contact-info-light"}`}>
                                 <i className={`theme-color ${contact.icon}`} />

@@ -1,18 +1,17 @@
 import { FC } from "react";
 import { useSelector } from "react-redux";
-import { Theme } from "./redux/Store";
+import { Theme, SiteData } from "./redux/Store";
 import SectionContainer from "./components/SectionContainer";
 import Recommendations from "./Recommendations";
-import WorkExperiencesData from "./data/WorkExperiencesData.json";
 
 interface ExperiencesProps { }
 
 const Experiences: FC<ExperiencesProps> = () => {
-    const { experiences, education, certificates } = WorkExperiencesData;
     const theme = useSelector((state: { theme: { theme: Theme } }) => state.theme).theme;
+    const siteData = useSelector((state: { siteData: SiteData }) => state.siteData);
     const activeTextClass = theme === Theme.Dark ? "light-color" : "dark-color";
 
-    const certificatesByType = certificates.reduce((acc, certificate) => {
+    const certificatesByType = siteData.certificate.reduce((acc, certificate) => {
         if (!acc[certificate.type]) {
             acc[certificate.type] = [];
         }
@@ -34,7 +33,7 @@ const Experiences: FC<ExperiencesProps> = () => {
                         <h2 className={`theme-after ${activeTextClass}`}>Experience</h2>
                         <ul>
                             {
-                                experiences.map((experience, index) => (
+                                siteData.experience.map((experience, index) => (
                                     <li key={index}>
                                         <div className="r-name">
                                             <i className="theme-bg ti-briefcase" />
@@ -56,7 +55,7 @@ const Experiences: FC<ExperiencesProps> = () => {
                         <h2 className={`theme-after ${activeTextClass}`}>Education</h2>
                         <ul>
                             {
-                                education.map((education, index) => (
+                                siteData.education.map((education, index) => (
                                     <li key={index}>
                                         <div className="r-name">
                                             <i className="theme-bg ti-book" />

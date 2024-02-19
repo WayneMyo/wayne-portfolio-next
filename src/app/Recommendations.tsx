@@ -1,9 +1,8 @@
 import Image from "next/image";
 import { FC, Fragment } from "react";
 import { useSelector } from "react-redux";
-import { Theme } from "./redux/Store";
+import { Theme, SiteData } from "./redux/Store";
 import Slider from "react-slick";
-import RecommendationsData from "./data/RecommendationsData.json";
 
 interface SliderPropsType {
   dots: boolean;
@@ -46,8 +45,8 @@ const sliderProps: { recommendations: SliderPropsType } = {
 };
 
 const Recommendations: FC = () => {
-  const { recommendations } = RecommendationsData;
   const theme = useSelector((state: { theme: { theme: Theme } }) => state.theme).theme;
+  const siteData = useSelector((state: { siteData: SiteData }) => state.siteData);
   const activeTextClass = theme === Theme.Dark ? "light-color" : "dark-color";
 
   return (
@@ -57,7 +56,7 @@ const Recommendations: FC = () => {
       </div>
       <Slider {...sliderProps.recommendations}>
         {
-          recommendations.map((recommendation, index) => (
+          siteData.recommendation.map((recommendation, index) => (
             <div key={index} className={`recommendations-col ${theme === Theme.Dark ? "recommendations-col-dark" : "recommendations-col-light"}`}>
               <div className="say">
                 {recommendation.say.map((paragraph, i) => (

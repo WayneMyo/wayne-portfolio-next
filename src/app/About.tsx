@@ -1,12 +1,11 @@
 import { FC } from "react";
 import { useSelector } from "react-redux";
-import { Theme } from "./redux/Store";
+import { Theme, SiteData } from "./redux/Store";
 import SectionContainer from "./components/SectionContainer";
-import AboutData from "./data/AboutData.json";
 
 const AboutUs: FC = () => {
-    const { aboutText, featureSkills, counterData } = AboutData;
     const theme = useSelector((state: { theme: { theme: Theme } }) => state.theme).theme;
+    const siteData = useSelector((state: { siteData: SiteData }) => state.siteData);
     const activeTextClass = theme === Theme.Dark ? "light-color" : "dark-color";
 
     return (
@@ -25,14 +24,14 @@ const AboutUs: FC = () => {
                 <div className="col-md-8 md-m-30px-t">
                     {/* about-text */}
                     <div className="about-text">
-                        <h3 className={activeTextClass}>{aboutText.title}</h3>
+                        <h3 className={activeTextClass}>I'm Wayne Myo</h3>
                         <p className="m-0px">
-                            {aboutText.text}
+                            {siteData.aboutText.text}
                         </p>
                     </div>{" "}
                     <div className="row m-30px-t">
                         {
-                            featureSkills.map((feature, index) => (
+                            siteData.featureSkill.map((feature, index) => (
                                 <div key={index} className="col-md-6 col-sm-6 m-30px-b">
                                     <div className="feature-box">
                                         <i className={`icon ${activeTextClass} theme-after ${feature.icon}`} />
@@ -63,7 +62,7 @@ const AboutUs: FC = () => {
             <div className="counter-row m-50px-t p-40px-t lg-m-35px-t lg-p-25px-t sm-p-15px-t">
                 <div className="row">
                     {
-                        counterData.map((counter, index) => (
+                        siteData.counter.map((counter, index) => (
                             <div key={index} className="col-md-3 col-sm-6 md-m-15px-tb">
                                 <div className="counter-col counter-box">
                                     <div className="counter-data" data-count={counter.count}>
